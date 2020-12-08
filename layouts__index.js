@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[1],{"+ego":function(n,o,t){"use strict";function r(n){var o=n.children;n.location,n.route,n.history,n.match;return o}t.r(o),t.d(o,"default",(function(){return r}))}}]);
