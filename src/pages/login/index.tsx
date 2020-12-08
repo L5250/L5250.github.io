@@ -29,7 +29,9 @@ const IndexPage: FC<PageProps> = ({ login, dispatch, loading }) => {
     <Button onClick={()=>setData()}>setData</Button>
   </div>
   return <div >
-    Hello {name}{jsx}
+    Hello {name}
+    这是登录页
+    {jsx}
   </div>;
 };
 

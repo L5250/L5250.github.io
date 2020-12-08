@@ -1,5 +1,6 @@
 {
   "private": true,
+  "author": {"name": "ljy"},
   "scripts": {
     "start": "cross-env PORT=3000 umi dev",
     "build": "cross-env ANALYZE=1 umi build",
