@@ -1,28 +1,26 @@
 import { Effect, ImmerReducer, Reducer, Subscription } from 'umi';
 
-export interface LoginModelState {
+export interface ModelState {
   name: string;
 }
 
-export interface LoginModelType {
-  namespace: String;
-  state: LoginModelState;
+export interface ModelType {
+  namespace: 'demo';
+  state: ModelState;
   effects: {
     query: Effect;
   };
   reducers: {
-    save: Reducer<LoginModelState>;
-    // 启用 immer 之后
-    // save: ImmerReducer<LoginModelState>;
+    save: Reducer<ModelState>;
   };
   subscriptions: { setup: Subscription };
 }
 
-const IndexModel: LoginModelType = {
-  namespace: 'login',
+const Model: ModelType = {
+  namespace: 'demo',
 
   state: {
-    name: 'login',
+    name: 'demo',
   },
 
   effects: {
@@ -36,10 +34,7 @@ const IndexModel: LoginModelType = {
         ...action.payload,
       };
     },
-    // 启用 immer 之后
-    // save(state, action) {
-    //   state.name = action.payload;
-    // },
+
   },
   subscriptions: {
     setup({ dispatch, history }) {
@@ -54,4 +49,4 @@ const IndexModel: LoginModelType = {
   }
 };
 
-export default IndexModel;
+export default Model;
