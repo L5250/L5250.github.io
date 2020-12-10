@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[2],{"i6+/":function(n,t,e){"use strict";e.r(t);e("+L6B");var i=e("2/Rp"),a=e("q1tI"),c=e.n(a),o=e("9kvl"),u=function(){return c.a.createElement("div",null,c.a.createElement(i["a"],{onClick:function(){o["history"].push("/")}},"\u8fd4\u56de"))};u.title="404",t["default"]=u}}]);

@@ -1,1 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([[5],{d1ca:function(e,n,r){"use strict";r.r(n);var a=r("q1tI"),t=r.n(a);function p(){return t.a.createElement(t.a.Fragment,null,"user profile")}p.wrappers=["@/wrappers/auth"],n["default"]=p}}]);
