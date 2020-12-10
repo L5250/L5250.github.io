@@ -9,37 +9,38 @@
 //   };
 // }
 
+//初始值 umijs/plugin-initial-state
 export async function getInitialState() {
-  const data = 999;
+  const data = { login: true };
   return data;
 }
 
-// import React from 'react';
-// import {
-//   BasicLayoutProps,
-//   Settings as LayoutSettings,
-// } from '@ant-design/pro-layout';
-// import { history } from 'umi';
+import React from 'react';
+import {
+  BasicLayoutProps,
+  Settings as LayoutSettings,
+} from '@ant-design/pro-layout';
+import { history } from 'umi';
+import Header from '@/components/header';
 
-// export const layout = ({
-//   initialState,
-// }: {
-//   initialState: { settings?: LayoutSettings; currentUser?: API.CurrentUser };
-// }): BasicLayoutProps => {
-//   return {
-//     rightContentRender: () => <div >11</div>,
-//     footerRender: () => <div >222</div>,
-//     onPageChange: () => {
-//       const { currentUser } = initialState;
-//       const { location } = history;
-//       // 如果没有登录，重定向到 login
-//       if (!currentUser && location.pathname !== '/user/login') {
-//         history.push('/user/login');
-//       }
-//     },
-//     menuHeaderRender: undefined,
-//     ...initialState?.settings,
-
-//   };
-// };
-
+export const layout = ({
+  initialState,
+}: {
+  initialState: { settings?: LayoutSettings; currentUser?: true };
+}): BasicLayoutProps => {
+  return {
+    title: '111',
+    // rightContentRender: () => <Header/>,
+    footerRender: () => <div>222</div>,
+    onPageChange: () => {
+      const { currentUser } = initialState;
+      const { location } = history;
+      // 如果没有登录，重定向到 login
+      // if (!currentUser && location.pathname !== '/user/login') {
+      //   history.push('/user/login');
+      // }
+    },
+    menuHeaderRender: undefined,
+    ...initialState?.settings,
+  };
+};

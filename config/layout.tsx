@@ -1,11 +1,16 @@
-import React from 'react'
-import { SmileOutlined, CrownOutlined, TabletOutlined } from '@ant-design/icons';
+import React from 'react';
+import {
+  SmileOutlined,
+  CrownOutlined,
+  TabletOutlined,
+} from '@ant-design/icons';
 
 export default {
   // 支持任何不需要 dom 的
   // https://procomponents.ant.design/components/layout#prolayout
   name: 'Ant',
   locale: true,
+  // logo:'',
   layout: 'side',
   route: {
     path: '/',
@@ -16,6 +21,9 @@ export default {
         // icon: <SmileOutlined />,
         component: './login',
       },
-    ]
-  }
-}
+    ],
+  },
+  location: {
+    pathname: '/home',
+  },
+};
