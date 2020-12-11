@@ -18,6 +18,10 @@ const serivce = {
       params,
       skipErrorHandler: true,
     })
+  },
+
+  getUser: (params: any) => {
+    request('/api/user/1', { params })
   }
 }
 export default serivce

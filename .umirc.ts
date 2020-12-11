@@ -6,7 +6,7 @@ export default defineConfig({
   dva: {},
 
   // 布局
-  layout: layout,
+  // layout: layout,
 
   // 如果没有 routes 配置，Umi 会进入约定式路由模式，然后分析 src/pages 目录拿到路由配置。
   // routes: [
@@ -41,13 +41,18 @@ export default defineConfig({
   publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
 
   //配置代理能力
-  proxy: {
-    '/api': {
-      'target': 'http://jsonplaceholder.typicode.com/',
-      'changeOrigin': true,
-      'pathRewrite': { '^/api': '' },
-    },
-  },
+  // proxy: {
+  //   '/apiColud': {
+  //     'target': 'http://jsonplaceholder.typicode.com/',
+  //     'changeOrigin': true,
+  //     'pathRewrite': { '^/api': '' },
+  //   },
+  //   "/api": {
+  //     "target": "https://pvp.qq.com",
+  //     "changeOrigin": true,
+  //     "pathRewrite": { "^/api": "" }
+  //   }
+  // },
 
   //
   favicon: "122",

@@ -3,13 +3,15 @@ import service from './service'
 
 export interface HomeModelState {
   name: string;
+  dataSource: any[]
 }
 
 export interface HomeModelType {
-  namespace: String;
-  state: Object;
+  namespace: string;
+  state: HomeModelState;
   effects: {
     getData: Effect;
+    getUser:Effect;
   };
   reducers: {
     save: Reducer<HomeModelState>;
@@ -36,6 +38,11 @@ const HomeModel: HomeModelType = {
         payload: data
       })
     },
+    *getUser({ payload }, { call, put }) {
+      const data = yield call(service.getUser, payload)
+      console.log(data)
+      return data
+    }
   },
   reducers: {
     save(state, action) {

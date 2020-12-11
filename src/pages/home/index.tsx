@@ -38,10 +38,20 @@ const Home: ConnectRC<PageProps> = ({ home, dispatch, loading }) => {
     console.log(getDvaApp());
 
   }
+
+
+  const getUser = () => {
+    dispatch({
+      type: "home/getUser",
+    }).then((res: void) => {
+      console.log(res);
+    })
+  }
   const { name } = home;
   return <div >
     Hello {name}
     <Button onClick={getData}>getData</Button>
+    <Button onClick={getUser}>getUser</Button>
   </div>;
 };
 
